@@ -1,0 +1,59 @@
+/*******************************************************************************
+* Copyright (C), 2000-2016,  Electronic Technology Co., Ltd.
+*                
+* @filename: es_common.h 
+*                
+* @author: Clarence.Chow <zhou_chenz@163.com> 
+*                
+* @version:
+*                
+* @date: 2016-10-18    
+*                
+* @brief:          
+*                  
+*                  
+* @details:        
+*                 
+*    
+*    
+* @comment           
+*******************************************************************************/
+#ifndef _ES_COMMON_H_
+#define _ES_COMMON_H_
+#ifndef NULL
+#define NULL (void *)(0)
+#endif
+
+#ifndef bool
+#define bool unsigned char
+#endif
+
+#define offsetof(TYPE, MEMBER) ((size_t) &((TYPE *)0)->MEMBER)
+
+#define container_of(ptr, type, member) ({			\
+	const typeof( ((type *)0)->member ) *__mptr = (ptr);	\
+	(type *)( (char *)__mptr - offsetof(type,member) );})
+
+
+
+/*
+ * min()/max()/clamp() macros that also do
+ * strict type-checking.. See the
+ * "unnecessary" pointer comparison.
+ */
+#define min(x, y) ({				\
+	typeof(x) _min1 = (x);			\
+	typeof(y) _min2 = (y);			\
+	(void) (&_min1 == &_min2);		\
+	_min1 < _min2 ? _min1 : _min2; })
+
+#define max(x, y) ({				\
+	typeof(x) _max1 = (x);			\
+	typeof(y) _max2 = (y);			\
+	(void) (&_max1 == &_max2);		\
+	_max1 > _max2 ? _max1 : _max2; })
+
+
+#endif /* ifndef _ES_COMMON_H_.2016-10-18 21:18:14 zcz */
+
+
