@@ -54,6 +54,13 @@
 	_max1 > _max2 ? _max1 : _max2; })
 
 
+#define ES_SUCCESS (0)
+#define ES_FAIL (-1)
+#define ES_INVALID_PARAM (-2)
+
+typedef int  es_error_t;
+
+
 #endif /* ifndef _ES_COMMON_H_.2016-10-18 21:18:14 zcz */
 
 
