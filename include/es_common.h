@@ -65,6 +65,11 @@ typedef int  es_error_t;
 #define ES_DEFAULT_INTERNAL_DEV 	"es_internal_dev"
 #define ES_DEFAULT_UNKNOW_DEV 		"es_unknow"
 
+#if ES_DEBUG
+#define ES_PRINTF(...) printf
+#else
+#define ES_PRINTF(...) do{} while(0)
+#endif
 
 
 #endif /* ifndef _ES_COMMON_H_.2016-10-18 21:18:14 zcz */
