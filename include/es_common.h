@@ -20,12 +20,15 @@
 *******************************************************************************/
 #ifndef _ES_COMMON_H_
 #define _ES_COMMON_H_
+
 #ifndef NULL
 #define NULL (void *)(0)
 #endif
 
 #ifndef bool
-#define bool unsigned char
+typedef unsigned char bool;
+#define es_false (0)
+#define	es_true (1)
 #endif
 
 #define offsetof(TYPE, MEMBER) ((size_t) &((TYPE *)0)->MEMBER)
