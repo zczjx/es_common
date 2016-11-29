@@ -25,6 +25,14 @@
 #define NULL (void *)(0)
 #endif
 
+static inline void es_common_delay(int i)
+{
+	for(; i > 0; i--)
+	{;}
+
+}
+
+
 #ifndef bool
 typedef unsigned char bool;
 #define es_false (0)
@@ -73,6 +81,7 @@ typedef int  es_error_t;
 #else
 #define ES_PRINTF(...) do{} while(0)
 #endif
+
 
 
 #endif /* ifndef _ES_COMMON_H_.2016-10-18 21:18:14 zcz */
