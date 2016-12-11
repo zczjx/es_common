@@ -20,6 +20,7 @@
 *******************************************************************************/
 #ifndef _ES_COMMON_H_
 #define _ES_COMMON_H_
+#include <stdio.h>
 
 #ifndef NULL
 #define NULL (void *)(0)
@@ -78,6 +79,7 @@ typedef int  es_error_t;
 #define ES_DEFAULT_INTERNAL_DEV 	"es_internal_dev"
 #define ES_DEFAULT_UNKNOW_DEV 		"es_unknow"
 
+#define ES_DEBUG 1
 
 #if ES_DEBUG
 #define ES_PRINTF(...) printf
