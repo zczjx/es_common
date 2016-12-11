@@ -33,6 +33,8 @@ static inline void es_common_delay(int i)
 }
 
 
+
+
 #ifndef bool
 typedef unsigned char bool;
 #define es_false (0)
@@ -76,11 +78,21 @@ typedef int  es_error_t;
 #define ES_DEFAULT_INTERNAL_DEV 	"es_internal_dev"
 #define ES_DEFAULT_UNKNOW_DEV 		"es_unknow"
 
+
 #if ES_DEBUG
 #define ES_PRINTF(...) printf
 #else
 #define ES_PRINTF(...) do{} while(0)
 #endif
+
+static inline void check_ret(es_error_t ret, const char *func_name)
+{
+	if(ES_SUCCESS != ret)
+	{
+		ES_PRINTF("%s fail! \n", func_name);
+		ES_PRINTF("fail ret num is %d \n", ret);
+	}
+}
 
 
 
