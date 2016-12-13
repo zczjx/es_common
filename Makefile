@@ -13,7 +13,7 @@ OBJDUMP		= $(CROSS_COMPILE)objdump
 export AS LD CC CPP AR NM
 export STRIP OBJCOPY OBJDUMP
 
-CFLAGS = -Wall  -g -fPIC  
+CFLAGS = -Wall  -g -fPIC   -rdynamic
 CFLAGS += -I $(shell pwd)/include
 # CFLAGS += -finput-charset=GBK -fexec-charset=UTF-8
 LDFLAGS = "-lm"
