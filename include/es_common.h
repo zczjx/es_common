@@ -79,10 +79,10 @@ typedef int  es_error_t;
 #define ES_DEFAULT_INTERNAL_DEV 	"es_internal_dev"
 #define ES_DEFAULT_UNKNOW_DEV 		"es_unknow"
 
-#define ES_DEBUG 1
+#define ES_DEBUG
 
-#if ES_DEBUG
-#define ES_PRINTF(...) printf
+#ifdef ES_DEBUG
+#define ES_PRINTF printf
 #else
 #define ES_PRINTF(...) do{} while(0)
 #endif
