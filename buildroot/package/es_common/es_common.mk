@@ -4,11 +4,11 @@
 #
 ################################################################################
 
-ES_COMMON_VERSION = 
+ES_COMMON_VERSION = master
 
-ES_COMMON_SITE_METHOD = git2
-ES_COMMON_SITE = git@192.168.1.106:git_repo/es_common.git
-ES_COMMON_SOURCE = ES_COMMON-$(ES_COMMON_VERSION).tar.gz
+ES_COMMON_SITE_METHOD = git
+ES_COMMON_SITE = git@github.com:zczjx/es_common.git
+# ES_COMMON_SOURCE = es_common-$(ES_COMMON_VERSION).tar.gz
 ES_COMMON_ALWAYS_BUILD = YES
 ES_COMMON_INSTALL_STAGING = YES
 ES_COMMON_CFLAGS = "-Wall -I $(STAGING_DIR)/usr/include -g -rdynamic  -fPIC  -L$(STAGING_DIR)/usr/lib"
